@@ -1,0 +1,72 @@
+---
+import { Code2, Layers, Rocket, LineChart, Users, Shield } from 'lucide-astro';
+
+const services = [
+  {
+    icon: Code2,
+    title: "Product Engineering",
+    description: "Full-stack development with modern technologies. We build scalable, maintainable systems from day one.",
+  },
+  {
+    icon: Layers,
+    title: "Product Design",
+    description: "User-centered design that balances aesthetics with functionality. Every pixel serves a purpose.",
+  },
+  {
+    icon: Rocket,
+    title: "MVP Development",
+    description: "Go from idea to market-ready product in weeks, not months. Validate fast, iterate faster.",
+  },
+  {
+    icon: LineChart,
+    title: "Scale & Growth",
+    description: "Performance optimization, infrastructure scaling, and technical strategy for growing products.",
+  },
+  {
+    icon: Users,
+    title: "Team Extension",
+    description: "Embed senior engineers directly into your team. Seamless collaboration, immediate impact.",
+  },
+  {
+    icon: Shield,
+    title: "Technical Due Diligence",
+    description: "Comprehensive code audits, architecture reviews, and security assessments for investors and acquirers.",
+  },
+];
+---
+
+<section id="services" class="py-24 md:py-32">
+  <div class="container">
+    <!-- Section header -->
+    <div class="max-w-2xl mb-16">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+        What we do
+      </h2>
+      <p class="text-lg text-muted-foreground">
+        End-to-end capabilities to take your product from concept to scale.
+      </p>
+    </div>
+    
+    <!-- Services grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((service, index) => {
+        const Icon = service.icon;
+        return (
+          <div 
+            class="group p-6 md:p-8 rounded-xl bg-gradient-card border border-border/50 hover:border-border transition-all duration-300 hover:shadow-card"
+            style={`animation-delay: ${index * 100}ms`}
+          >
+            <div class="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center mb-5 group-hover:bg-accent/10 transition-colors">
+              <Icon class="w-5 h-5 text-muted-foreground group-hover:text-accent transition-colors" />
+            </div>
+            <h3 class="text-lg font-medium mb-2">{service.title}</h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+

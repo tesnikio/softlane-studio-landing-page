@@ -1,0 +1,59 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Discovery",
+    description: "We dive deep into your vision, users, and market. Understanding the 'why' before the 'how'.",
+  },
+  {
+    number: "02",
+    title: "Strategy",
+    description: "Architecture decisions, technology choices, and a clear roadmap aligned with your goals.",
+  },
+  {
+    number: "03",
+    title: "Build",
+    description: "Iterative development with continuous feedback. You're never in the dark about progress.",
+  },
+  {
+    number: "04",
+    title: "Launch & Iterate",
+    description: "Deploy to production, measure what matters, and refine based on real user data.",
+  },
+];
+---
+
+<section id="process" class="py-24 md:py-32 bg-gradient-subtle">
+  <div class="container">
+    <!-- Section header -->
+    <div class="max-w-2xl mb-16">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+        How we work
+      </h2>
+      <p class="text-lg text-muted-foreground">
+        A proven process that eliminates surprises and delivers results.
+      </p>
+    </div>
+    
+    <!-- Process steps -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
+      {steps.map((step, index) => (
+        <div class="relative">
+          <!-- Connector line -->
+          {index < steps.length - 1 && (
+            <div class="hidden lg:block absolute top-8 left-full w-full h-px bg-border/50"></div>
+          )}
+          
+          <div class="mb-4">
+            <span class="text-5xl font-bold text-muted/50">{step.number}</span>
+          </div>
+          <h3 class="text-xl font-medium mb-2">{step.title}</h3>
+          <p class="text-muted-foreground text-sm leading-relaxed">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+

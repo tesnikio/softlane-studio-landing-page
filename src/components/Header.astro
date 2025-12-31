@@ -1,0 +1,40 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50">
+  <div class="absolute inset-0 bg-background/80 backdrop-blur-md border-b border-border/50"></div>
+  <div class="container relative">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href={base} class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center">
+          <span class="text-accent-foreground font-bold text-sm">S</span>
+        </div>
+        <span class="font-semibold text-lg tracking-tight">Softlane</span>
+      </a>
+      
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#services" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          Services
+        </a>
+        <a href="#process" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          Process
+        </a>
+        <a href="#about" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          About
+        </a>
+      </nav>
+      
+      <!-- CTA -->
+      <a 
+        href="#contact" 
+        class="text-sm font-medium text-foreground hover:text-accent transition-colors"
+      >
+        Let's talk →
+      </a>
+    </div>
+  </div>
+</header>
+

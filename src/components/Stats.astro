@@ -1,0 +1,26 @@
+---
+const stats = [
+  { value: "50+", label: "Products launched" },
+  { value: "8+", label: "Years of experience" },
+  { value: "$2B+", label: "Raised by our clients" },
+  { value: "100%", label: "Long-term partnerships" },
+];
+---
+
+<section class="py-16 border-y border-border/50">
+  <div class="container">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      {stats.map((stat) => (
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-semibold mb-1 text-gradient-accent">
+            {stat.value}
+          </div>
+          <div class="text-sm text-muted-foreground">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
