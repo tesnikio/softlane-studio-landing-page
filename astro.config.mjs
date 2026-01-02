@@ -4,7 +4,6 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://your-username.github.io',
-  base: '/softlane-studio-landing-page',
+  site: 'https://softlane.studio',
+  // No base path needed with custom domain
 });
-
