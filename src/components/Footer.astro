@@ -1,4 +1,6 @@
 ---
+import logo from '../assets/Logo_2.svg?raw';
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -7,11 +9,8 @@ const currentYear = new Date().getFullYear();
     <div class="grid md:grid-cols-4 gap-12 md:gap-8">
       <!-- Brand -->
       <div class="md:col-span-2">
-        <div class="flex items-center gap-2 mb-4">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent/70 flex items-center justify-center">
-            <span class="text-accent-foreground font-bold text-sm">S</span>
-          </div>
-          <span class="font-semibold text-lg tracking-tight">Softlane Studio</span>
+        <div class="flex items-center gap-3 mb-4 [&_svg]:h-8 [&_svg]:w-auto">
+          <Fragment set:html={logo} />
         </div>
         <p class="text-muted-foreground text-sm max-w-sm leading-relaxed">
           A venture and product studio that partners with ambitious founders 
@@ -72,4 +71,3 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 </footer>
-
