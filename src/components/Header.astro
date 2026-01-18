@@ -1,6 +1,6 @@
 ---
 import Button from './Button.astro';
-import logo from '../assets/Logomark_1.svg';
+import logo from '../assets/full logo primary 2.svg';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -11,9 +11,11 @@ const base = import.meta.env.BASE_URL;
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
       <a href={base} class="flex items-center gap-3 group transition-transform duration-300 hover:scale-105">
-        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full overflow-hidden bg-background/10 ring-1 ring-border/40 transition-shadow duration-300 group-hover:shadow-[0_0_24px_hsl(var(--accent)/0.45)]">
-          <img src={logo.src} alt="Softlane Studio" class="h-10 w-10 object-cover" />
-        </span>
+        <img
+          src={logo.src}
+          alt="Softlane Studio"
+          class="h-40 md:h-48 w-auto object-contain"
+        />
       </a>
       
       <!-- Navigation -->

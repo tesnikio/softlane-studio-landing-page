@@ -1,5 +1,5 @@
 ---
-import logo from '../assets/Logomark_1.svg';
+import logo from '../assets/full logo primary 2.svg';
 
 const currentYear = new Date().getFullYear();
 ---
@@ -10,9 +10,11 @@ const currentYear = new Date().getFullYear();
       <!-- Brand -->
       <div class="md:col-span-2">
         <div class="flex items-center gap-3 mb-4">
-          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full overflow-hidden bg-background/10 ring-1 ring-border/40 transition-shadow duration-300 hover:shadow-[0_0_24px_hsl(var(--accent)/0.45)]">
-            <img src={logo.src} alt="Softlane Studio" class="h-10 w-10 object-cover" />
-          </span>
+          <img
+            src={logo.src}
+            alt="Softlane Studio"
+            class="h-32 md:h-40 w-auto object-contain"
+          />
         </div>
         <p class="text-muted-foreground text-sm max-w-sm leading-relaxed">
           A venture and product studio that partners with ambitious founders 
