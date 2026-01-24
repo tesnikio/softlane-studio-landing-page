@@ -1,36 +1,36 @@
 ---
-import { Code2, Layers, Rocket, LineChart, Users, Shield } from 'lucide-astro';
+import { Layers, Rocket, LineChart, Boxes, Palette, Infinity } from 'lucide-astro';
 
 const services = [
   {
-    icon: Code2,
-    title: "Product Engineering",
-    description: "Full-stack development with modern technologies. We build scalable, maintainable systems from day one.",
-  },
-  {
-    icon: Layers,
-    title: "Product Design",
-    description: "User-centered design that balances aesthetics with functionality. Every pixel serves a purpose.",
-  },
-  {
     icon: Rocket,
-    title: "MVP Development",
-    description: "Go from idea to market-ready product in weeks, not months. Validate fast, iterate faster.",
+    title: "Product & Brand Creation",
+    description: "We design, build, and launch software products and brands from idea to market-ready.",
+  },
+  {
+    icon: Palette,
+    title: "Brand Experience Through Software",
+    description: "Customer-facing apps, design systems, and workflows that make the brand feel consistent and premium.",
+  },
+  {
+    icon: Boxes,
+    title: "Systems & Platform Foundations",
+    description: "Custom tools, internal systems, and infrastructure that power execution and scale.",
   },
   {
     icon: LineChart,
-    title: "Scale & Growth",
-    description: "Performance optimization, infrastructure scaling, and technical strategy for growing products.",
+    title: "Growth & Revenue Enablement",
+    description: "Every project is tied to outcomes: acquisition, conversion, retention, and brand equity.",
   },
   {
-    icon: Users,
-    title: "Team Extension",
-    description: "Embed senior engineers directly into your team. Seamless collaboration, immediate impact.",
+    icon: Layers,
+    title: "Studio Partnership",
+    description: "We partner long-term via retainers, revenue participation, or equity—aligned with outcomes.",
   },
   {
-    icon: Shield,
-    title: "Technical Due Diligence",
-    description: "Comprehensive code audits, architecture reviews, and security assessments for investors and acquirers.",
+    icon: Infinity,
+    title: "Continuous Iteration",
+    description: "We stay involved after launch to improve performance, product quality, and customer experience.",
   },
 ];
 ---
@@ -40,10 +40,10 @@ const services = [
     <!-- Section header -->
     <div class="max-w-2xl mb-16">
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-        What we do
+        How we create value
       </h2>
       <p class="text-lg text-muted-foreground">
-        End-to-end capabilities to take your product from concept to scale.
+        Software is the brand. We build systems, products, and experiences that compound over time.
       </p>
     </div>
     
@@ -53,14 +53,14 @@ const services = [
         const Icon = service.icon;
         return (
           <div 
-            class="group p-6 md:p-8 rounded-xl bg-secondary/40 border border-border/40 hover:border-accent/40 transition-colors duration-300"
+            class="group p-6 md:p-8 rounded-2xl bg-background/60 border border-border/50 hover:border-accent/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_-28px_hsl(var(--primary)/0.35)]"
             style={`animation-delay: ${index * 100}ms`}
           >
             <div class="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center mb-5 group-hover:bg-accent/25 transition-colors">
               <Icon class="w-5 h-5 text-accent" />
             </div>
-            <h3 class="text-lg font-medium mb-2">{service.title}</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
+            <h3 class="font-caption text-xl font-semibold tracking-tight mb-2">{service.title}</h3>
+            <p class="text-foreground/70 text-sm leading-relaxed">
               {service.description}
             </p>
           </div>
