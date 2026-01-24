@@ -1,8 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Sequel Sans Font */
+@font-face {
+  font-family: 'Sequel Sans';
+  src: url('../assets/sequel-sans-display-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Halfre Font */
+@font-face {
+  font-family: 'Halfre';
+  src: url('../assets/halfre.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
@@ -89,13 +105,13 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Sequel Sans', system-ui, sans-serif;
   }
 }
 
 @layer utilities {
   .font-caption {
-    font-family: 'Halfre', 'Inter', system-ui, sans-serif;
+    font-family: 'Halfre', 'Sequel Sans', system-ui, sans-serif;
   }
 
   .text-balance {
@@ -107,9 +123,35 @@
     background-image: linear-gradient(135deg, hsl(var(--foreground)) 0%, hsl(var(--muted-foreground)) 100%);
   }
 
+  /* Metallic/highlight gradient for titles */
+  .text-gradient-title {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      180deg,
+      hsl(0 0% 100%) 0%,
+      hsl(0 0% 100%) 15%,
+      hsl(0 0% 85%) 40%,
+      hsl(0 0% 50%) 85%,
+      hsl(0 0% 40%) 100%
+    );
+  }
+
+  /* Even more dramatic gradient for hero */
+  .text-gradient-hero {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      180deg,
+      hsl(0 0% 100%) 0%,
+      hsl(0 0% 100%) 20%,
+      hsl(0 0% 80%) 50%,
+      hsl(0 0% 45%) 90%,
+      hsl(0 0% 35%) 100%
+    );
+  }
+
   .text-gradient-accent {
     color: hsl(var(--accent));
-    font-family: 'Halfre', 'Inter', system-ui, sans-serif;
+    font-family: 'Halfre', 'Sequel Sans', system-ui, sans-serif;
   }
 
   .bg-gradient-subtle {
@@ -126,6 +168,66 @@
 
   .shadow-card {
     box-shadow: var(--shadow-card);
+  }
+
+  /* Neon glow border effect */
+  .neon-border {
+    position: relative;
+    border: 1px solid hsl(var(--primary) / 0.4);
+    box-shadow: 
+      0 0 10px hsl(var(--primary) / 0.15),
+      0 0 20px hsl(var(--primary) / 0.1),
+      inset 0 0 20px hsl(var(--primary) / 0.05);
+  }
+
+  .neon-border-hover {
+    position: relative;
+    border: 1px solid hsl(var(--border) / 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .neon-border-hover:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: 
+      0 0 15px hsl(var(--primary) / 0.2),
+      0 0 30px hsl(var(--primary) / 0.1),
+      inset 0 0 20px hsl(var(--primary) / 0.03);
+  }
+
+  /* Card with neon glow */
+  .card-neon {
+    background: hsl(var(--background) / 0.6);
+    border: 1px solid hsl(var(--primary) / 0.25);
+    border-radius: 1rem;
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.08),
+      inset 0 1px 0 hsl(var(--primary) / 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .card-neon:hover {
+    border-color: hsl(var(--primary) / 0.45);
+    box-shadow: 
+      0 0 30px hsl(var(--primary) / 0.15),
+      0 0 60px hsl(var(--primary) / 0.08),
+      inset 0 1px 0 hsl(var(--primary) / 0.15);
+    transform: translateY(-2px);
+  }
+
+  /* Button neon glow */
+  .btn-neon {
+    border: 1px solid hsl(var(--primary) / 0.5);
+    box-shadow: 
+      0 0 12px hsl(var(--primary) / 0.2),
+      0 0 24px hsl(var(--primary) / 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .btn-neon:hover {
+    border-color: hsl(var(--primary) / 0.7);
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 40px hsl(var(--primary) / 0.15);
   }
 }
 

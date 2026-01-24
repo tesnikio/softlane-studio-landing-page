@@ -39,7 +39,7 @@ const services = [
   <div class="container">
     <!-- Section header -->
     <div class="max-w-2xl mb-16">
-      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-gradient-title">
         How we create value
       </h2>
       <p class="text-lg text-muted-foreground">
@@ -53,13 +53,13 @@ const services = [
         const Icon = service.icon;
         return (
           <div 
-            class="group p-6 md:p-8 rounded-2xl bg-background/60 border border-border/50 hover:border-accent/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_48px_-28px_hsl(var(--primary)/0.35)]"
+            class="group p-6 md:p-8 rounded-2xl card-neon"
             style={`animation-delay: ${index * 100}ms`}
           >
             <div class="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center mb-5 group-hover:bg-accent/25 transition-colors">
               <Icon class="w-5 h-5 text-accent" />
             </div>
-            <h3 class="font-caption text-xl font-semibold tracking-tight mb-2">{service.title}</h3>
+            <h3 class="font-caption text-xl font-semibold tracking-tight mb-2 text-gradient-title">{service.title}</h3>
             <p class="text-foreground/70 text-sm leading-relaxed">
               {service.description}
             </p>
