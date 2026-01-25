@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Sequel Sans Font */
+/* Sequel Sans Variable Display - for big titles */
 @font-face {
-  font-family: 'Sequel Sans';
-  src: url('../assets/sequel-sans-display-bold.ttf') format('truetype');
-  font-weight: 700;
+  font-family: 'Sequel Sans Display';
+  src: url('../assets/SequelSansVFDisp.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* Halfre Font */
+/* Sequel Sans Display Bold - for body text */
 @font-face {
-  font-family: 'Halfre';
-  src: url('../assets/halfre.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Sequel Sans';
+  src: url('../assets/sequel-sans-display-bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -111,7 +111,7 @@
 
 @layer utilities {
   .font-caption {
-    font-family: 'Halfre', 'Sequel Sans', system-ui, sans-serif;
+    font-family: 'Sequel Sans Display', system-ui, sans-serif;
   }
 
   .text-balance {
@@ -151,7 +151,7 @@
 
   .text-gradient-accent {
     color: hsl(var(--accent));
-    font-family: 'Halfre', 'Sequel Sans', system-ui, sans-serif;
+    font-family: 'Sequel Sans Display', system-ui, sans-serif;
   }
 
   .bg-gradient-subtle {
